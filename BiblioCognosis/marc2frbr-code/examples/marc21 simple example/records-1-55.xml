@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns:f="http://idi.ntnu.no/frbrizer/">
+   <record f:id="020eafe3-af49-3971-bac9-0b9b07fdda7c"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Bachmann</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Ingeborg</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1926-1973</subfield>
+      </datafield>
+      <f:label>Ingeborg Bachmann</f:label>
+   </record>
+   <record f:id="191e5680-0f04-342e-b9eb-27d47d2028f5"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Assimacopoulos</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Kostas</subfield>
+      </datafield>
+      <f:label>Kostas Assimacopoulos</f:label>
+   </record>
+   <record f:id="22d641bd-1cea-379a-8771-5cd5f61f9b07"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Barclay</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Florence</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1862-1921</subfield>
+      </datafield>
+      <f:label>Florence Barclay</f:label>
+   </record>
+   <record f:id="2a9adc23-6fc7-3378-9492-b5d02c0c64ff"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Badinter</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Elizabeth</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1944</subfield>
+      </datafield>
+      <f:label>Elizabeth Badinter</f:label>
+   </record>
+   <record f:id="3d1c872f-100b-3b46-a75f-884ef8f62eab"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Balzac</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Honoré de</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1799-1850</subfield>
+      </datafield>
+      <f:label>Honoré de Balzac</f:label>
+   </record>
+   <record f:id="5ec7e989-171c-3a10-ae89-57b883d9e879"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Apuleius</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Lucius</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">120-180</subfield>
+      </datafield>
+      <f:label>Lucius Apuleius</f:label>
+   </record>
+   <record f:id="64fb4992-887c-3f25-87a3-63103a2238ca"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Aîné</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">J. H. Rosny</subfield>
+      </datafield>
+      <f:label>J. H. Rosny Aîné</f:label>
+   </record>
+   <record f:id="6524a92b-1e2e-33f1-8bf0-6afccbeab7fb"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Arrabal</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Fernando</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1932</subfield>
+      </datafield>
+      <f:label>Fernando Arrabal</f:label>
+   </record>
+   <record f:id="66bf69c2-9169-3845-96ae-0220d21d1456"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Anjos</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Cyro Versiani dos</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1906-1994</subfield>
+      </datafield>
+      <f:label>Cyro Versiani dos Anjos</f:label>
+   </record>
+   <record f:id="819a33e3-984b-3b69-a7fb-10a6dbe2391c"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Archer</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Jeffrey</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1940</subfield>
+      </datafield>
+      <f:label>Jeffrey Archer</f:label>
+   </record>
+   <record f:id="9a3b115c-13f0-363f-9152-965276249c65"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Bach</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Richard</subfield>
+      </datafield>
+      <f:label>Richard Bach</f:label>
+   </record>
+   <record f:id="af611bb0-1b50-3ef2-bc31-0f171e82560d"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Auster</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Paul</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1947-</subfield>
+      </datafield>
+      <f:label>Paul Auster</f:label>
+   </record>
+   <record f:id="b00466dc-f496-3a03-8d87-d700acbca326"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Angel Asturias</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Miguel</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1899-1974</subfield>
+      </datafield>
+      <f:label>Miguel Angel Asturias</f:label>
+   </record>
+   <record f:id="b511cbf7-5ee6-3f5f-a2a8-5c426077cc64"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Ali</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Miriam</subfield>
+      </datafield>
+      <f:label>Miriam Ali</f:label>
+   </record>
+   <record f:id="c12198c4-3c2d-3910-a5f3-ca04e4bd65e7"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Aub</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Max</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1903-1972</subfield>
+      </datafield>
+      <f:label>Max Aub</f:label>
+   </record>
+   <record f:id="c61bd38c-dce7-315e-ac42-b838f3bdcfc3"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Aldiss</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Brian W</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1925</subfield>
+      </datafield>
+      <f:label>Brian W Aldiss</f:label>
+   </record>
+   <record f:id="cb27a9b8-cc6f-3f0f-add8-ef84fa2d4e4b"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Aubry</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Fernand Fournier</subfield>
+      </datafield>
+      <f:label>Fernand Fournier Aubry</f:label>
+   </record>
+   <record f:id="cc1d4786-ac5f-3572-b75b-9171e6f2d7c3"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Allingham</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Margery</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1904-1966</subfield>
+      </datafield>
+      <f:label>Margery Allingham</f:label>
+   </record>
+   <record f:id="dd3ac2d2-515d-349c-bf7d-4fb9d03973bd"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Austen</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Jane</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1775-1817</subfield>
+      </datafield>
+      <f:label>Jane Austen</f:label>
+   </record>
+   <record f:id="e645c1f7-b766-3e1a-83e9-3f4ed093a61d"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Polo</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Marco</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1254-1323</subfield>
+      </datafield>
+      <f:label>Marco Polo</f:label>
+   </record>
+   <record f:id="edfa81c5-b4c6-300c-8d5b-8de3d698f7bd"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Ardel</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Henri</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1863-1938</subfield>
+      </datafield>
+      <f:label>Henri Ardel</f:label>
+   </record>
+   <record f:id="eef5974d-6fa9-351e-a5f7-df274ce46d18"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Alcott</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Louisa May</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1832-1888</subfield>
+      </datafield>
+      <f:label>Louisa May Alcott</f:label>
+   </record>
+   <record f:id="eef866f2-1164-328f-a1b6-fdaec2341067"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Auel</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Jean M</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1936</subfield>
+      </datafield>
+      <f:label>Jean M Auel</f:label>
+   </record>
+   <record f:id="f0de0d96-1871-37a8-b107-cc43542a1c0e"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Atwood</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Margaret</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1939</subfield>
+      </datafield>
+      <f:label>Margaret Atwood</f:label>
+   </record>
+   <record f:id="f22a6770-6d9d-3b3d-8a4f-f4875e121422"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Andahazi</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Federico</subfield>
+      </datafield>
+      <f:label>Federico Andahazi</f:label>
+   </record>
+   <record f:id="fe65f2db-4073-39eb-a5ff-2ad68f099741"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Andreiev</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Léonidas</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1871-1919</subfield>
+      </datafield>
+      <f:label>Léonidas Andreiev</f:label>
+   </record>
+   <record f:id="ff75fb0c-36e7-3f3d-8059-abfb6522de2f"
+           f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005">
+      <datafield tag="700" ind1=" " ind2="1">
+         <subfield code="a" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Amis</subfield>
+         <subfield code="b" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3039">Kingsley</subfield>
+         <subfield code="f" f:type="http://iflastandards.info/ns/fr/frbr/frbrer/P3040">1922-1995</subfield>
+      </datafield>
+      <f:label>Kingsley Amis</f:label>
+   </record>
+</collection>
