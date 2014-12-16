@@ -24,9 +24,27 @@ Correspondente MARC XML:
 Conversão baseada em XSLT, com base no trabalho disponibilizado no SourceForge por Trond Aalberg, http://www.ntnu.edu/employees/trondaal
 svn checkout svn://svn.code.sf.net/p/marc2frbr/code/trunk marc2frbr-code
 
+
+#### Múltiplas Manifestações
+
+http://montalegre.opacnet.com/OPAC/default.aspx?ContentAreaControl=ShowRegHoldings.ascx&RegNo=587
+
+http://montalegre.opacnet.com/OPAC/default.aspx?ContentAreaControl=ShowRegHoldings.ascx&RegNo=1172
+
 ### Resultado da conversão: FRBR em XML
 
-Noção de registo!
+#### Noção de registo
+
+Os registo podem ter vários tipos, correspondendo às várias entidades:
+
+Person: <record f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005"
+
+Obra: <record f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1001"
+
+Expressão: <record f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1002"
+
+Manifestação: <record f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1003"
+
 
 ### Enriquecimento do FRBR XML
 

@@ -47,6 +47,7 @@
       <xsl:variable name="step1">
          <f:record-set>
             <xsl:call-template name="MARC21-700-Person"/>
+            <xsl:call-template name="MARC21-200-Work"/>
          </f:record-set>
       </xsl:variable>
       <xsl:variable name="step2">
@@ -62,6 +63,145 @@
          <xsl:apply-templates select="$step4" mode="remove-record-set"/>
       </xsl:variable>
       <xsl:copy-of select="$step5"/>
+   </xsl:template>
+   <xsl:template name="MARC21-200-Work">
+      <xsl:variable name="this_template_name" select="'MARC21-200-Work'"/>
+      <xsl:variable name="tag" as="xs:string" select="'200'"/>
+      <xsl:variable name="record" select="."/>
+      <xsl:variable name="marcid" select="*:controlfield[@*:tag='001']"/>
+      <xsl:for-each select="node()[@*:tag='200']">
+         <xsl:variable name="this_field"
+                       select="(ancestor-or-self::*:datafield, ancestor-or-self::*:controlfield)"/>
+         <xsl:variable name="anchor_field"
+                       select="(ancestor-or-self::*:datafield, ancestor-or-self::*:controlfield)"/>
+         <xsl:variable name="this_field_position" as="xs:string" select="string(position())"/>
+         <xsl:element name="{name(ancestor-or-self::*:record)}"
+                      namespace="{namespace-uri(ancestor-or-self::*:record)}">
+            <xsl:attribute name="f:id"
+                           select="string-join(($record/@*:id,$this_template_name,$tag,$this_field_position), ':')"/>
+            <xsl:attribute name="f:type" select="'http://iflastandards.info/ns/fr/frbr/frbrer/C1001'"/>
+            <xsl:if test="$include_labels">
+               <xsl:attribute name="f:label" select="'Work'"/>
+            </xsl:if>
+            <xsl:attribute name="f:templatename" select="$this_template_name"/>
+            <xsl:if test="$include_counters">
+               <xsl:attribute name="f:c" select="1"/>
+            </xsl:if>
+            <xsl:if test="$include_anchorvalues">
+               <xsl:element name="f:anchorvalue">
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:value-of select="."/>
+               </xsl:element>
+            </xsl:if>
+            <xsl:if test="$include_templateinfo">
+               <xsl:element name="f:templatename">
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:value-of select="$this_template_name"/>
+               </xsl:element>
+            </xsl:if>
+            <xsl:if test="$include_internal_key">
+               <xsl:element name="f:intkey">
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:value-of select="string-join(($record/@*:id,$this_template_name,$tag,$this_field_position), ':')"/>
+               </xsl:element>
+            </xsl:if>
+            <xsl:if test="$include_MARC001_in_entityrecord">
+               <xsl:element name="f:mid">
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:attribute name="f:i" select="$marcid"/>
+               </xsl:element>
+            </xsl:if>
+            <xsl:for-each select="$record/*:datafield[@*:tag='200'][. = $this_field][*:subfield/@*:code = ('a')]">
+               <xsl:copy>
+                  <xsl:call-template name="copy-attributes"/>
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:for-each select="*:subfield[@*:code = ('a')]">
+                     <xsl:if test="@*:code = 'a'">
+                        <xsl:copy>
+                           <xsl:call-template name="copy-content">
+                              <xsl:with-param name="type" select="'http://iflastandards.info/ns/fr/frbr/frbrer/P3001'"/>
+                              <xsl:with-param name="label" select="'has title of the work'"/>
+                              <xsl:with-param name="select" select="."/>
+                           </xsl:call-template>
+                        </xsl:copy>
+                     </xsl:if>
+                  </xsl:for-each>
+                  <xsl:if test="$include_MARC001_in_subfield">
+                     <xsl:element name="f:mid">
+                        <xsl:attribute name="f:i" select="$marcid"/>
+                        <xsl:if test="$include_counters">
+                           <xsl:attribute name="f:c" select="1"/>
+                        </xsl:if>
+                     </xsl:element>
+                  </xsl:if>
+               </xsl:copy>
+            </xsl:for-each>
+            <xsl:for-each select="$record/*:datafield[@*:tag='304'][*:subfield/@*:code = ('a')]">
+               <xsl:copy>
+                  <xsl:call-template name="copy-attributes"/>
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:for-each select="*:subfield[@*:code = ('a')]">
+                     <xsl:if test="@*:code = 'a'">
+                        <xsl:copy>
+                           <xsl:call-template name="copy-content">
+                              <xsl:with-param name="type" select="'http://iflastandards.info/ns/fr/frbr/frbrer/P3001'"/>
+                              <xsl:with-param name="label" select="'has title of the work'"/>
+                              <xsl:with-param name="select" select="."/>
+                           </xsl:call-template>
+                        </xsl:copy>
+                     </xsl:if>
+                  </xsl:for-each>
+                  <xsl:if test="$include_MARC001_in_subfield">
+                     <xsl:element name="f:mid">
+                        <xsl:attribute name="f:i" select="$marcid"/>
+                        <xsl:if test="$include_counters">
+                           <xsl:attribute name="f:c" select="1"/>
+                        </xsl:if>
+                     </xsl:element>
+                  </xsl:if>
+               </xsl:copy>
+            </xsl:for-each>
+            <xsl:for-each select="$record/*:datafield[@*:tag='210'][*:subfield/@*:code = ('d')]">
+               <xsl:copy>
+                  <xsl:call-template name="copy-attributes"/>
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:for-each select="*:subfield[@*:code = ('d')]">
+                     <xsl:if test="@*:code = 'd'">
+                        <xsl:copy>
+                           <xsl:call-template name="copy-content">
+                              <xsl:with-param name="type" select="'http://iflastandards.info/ns/fr/frbr/frbrer/P3003'"/>
+                              <xsl:with-param name="label" select="'has date of work'"/>
+                              <xsl:with-param name="select" select="."/>
+                           </xsl:call-template>
+                        </xsl:copy>
+                     </xsl:if>
+                  </xsl:for-each>
+                  <xsl:if test="$include_MARC001_in_subfield">
+                     <xsl:element name="f:mid">
+                        <xsl:attribute name="f:i" select="$marcid"/>
+                        <xsl:if test="$include_counters">
+                           <xsl:attribute name="f:c" select="1"/>
+                        </xsl:if>
+                     </xsl:element>
+                  </xsl:if>
+               </xsl:copy>
+            </xsl:for-each>
+         </xsl:element>
+      </xsl:for-each>
    </xsl:template>
    <xsl:template name="MARC21-700-Person">
       <xsl:variable name="this_template_name" select="'MARC21-700-Person'"/>
@@ -163,6 +303,38 @@
                   </xsl:if>
                </xsl:copy>
             </xsl:for-each>
+            <xsl:for-each select="$record/node()[@*:tag='200']">
+               <xsl:variable name="target_template_name" select="'MARC21-200-Work'"/>
+               <xsl:variable name="target_tag" select="'200'"/>
+               <xsl:variable name="target_field"
+                             select="(ancestor-or-self::*:datafield, ancestor-or-self::*:controlfield)"/>
+               <xsl:variable name="target_field_position" as="xs:string" select="string(position())"/>
+               <f:relationship>
+                  <xsl:attribute name="f:type" select="'http://iflastandards.info/ns/fr/frbr/frbrer/P2010'"/>
+                  <xsl:attribute name="f:itype" select="'http://iflastandards.info/ns/fr/frbr/frbrer/P2009'"/>
+                  <xsl:if test="$include_target_entity_type">
+                     <xsl:attribute name="f:target_type"
+                                    select="'http://iflastandards.info/ns/fr/frbr/frbrer/C1001'"/>
+                  </xsl:if>
+                  <xsl:if test="$include_counters">
+                     <xsl:attribute name="f:c" select="1"/>
+                  </xsl:if>
+                  <xsl:attribute name="f:href"
+                                 select="string-join(($record/@*:id,$target_template_name,$target_tag,$target_field_position), ':')"/>
+                  <xsl:if test="$include_internal_key">
+                     <xsl:attribute name="f:intkey"
+                                    select="string-join(($record/@*:id,$target_template_name,$target_tag,$target_field_position), ':')"/>
+                  </xsl:if>
+                  <xsl:if test="$include_MARC001_in_relationships">
+                     <xsl:element name="f:mid">
+                        <xsl:attribute name="f:i" select="$marcid"/>
+                        <xsl:if test="$include_counters">
+                           <xsl:attribute name="f:c" select="1"/>
+                        </xsl:if>
+                     </xsl:element>
+                  </xsl:if>
+               </f:relationship>
+            </xsl:for-each>
          </xsl:element>
       </xsl:for-each>
    </xsl:template>
@@ -173,8 +345,31 @@
                <xsl:when test="@*:templatename = 'MARC21-700-Person'">
                   <xsl:element name="f:keyentry">
                      <xsl:variable name="key">
+                        <xsl:value-of select="local:sort-keys(*:datafield[@tag = '700'][1]/*:subfield[@code = 'b'][1])"/>
                         <xsl:value-of select="local:sort-keys(*:datafield[@tag = '700'][1]/*:subfield[@code = 'a'][1])"/>
                         <xsl:value-of select="local:sort-keys(*:datafield[@tag = '700'][1]/*:subfield[@code = 'f'][1])"/>
+                        <xsl:value-of select="concat('\',@*:type, '#')"/>
+                     </xsl:variable>
+                     <xsl:variable name="keyvalue"
+                                   select="replace(lower-case(string-join($key, '\')), '[^a-z0-9\\#|¤§]', '')"/>
+                     <xsl:attribute name="f:key" select="$keyvalue"/>
+                     <xsl:attribute name="f:id" select="@*:id"/>
+                  </xsl:element>
+               </xsl:when>
+            </xsl:choose>
+         </xsl:for-each>
+      </f:keymap>
+   </xsl:template>
+   <xsl:template match="f:record-set" mode="create-key-mapping-step-2">
+      <f:keymap>
+         <xsl:for-each select="*:record">
+            <xsl:choose>
+               <xsl:when test="@*:templatename = 'MARC21-200-Work'">
+                  <xsl:element name="f:keyentry">
+                     <xsl:variable name="key">
+                        <xsl:value-of select="local:sort-keys(local:sort-relationships(*:relationship[ends-with(@*:type, 'P2009')])[1]/@*:href)"/>
+                        <xsl:value-of select="local:sort-keys(*:datafield[@tag = '200']/*:subfield[@code = 'a'][1])"/>
+                        <xsl:value-of select="local:sort-keys(*:datafield[@tag = '210']/*:subfield[@code = 'd'][1])"/>
                         <xsl:value-of select="concat('\',@*:type, '#')"/>
                      </xsl:variable>
                      <xsl:variable name="keyvalue"
@@ -197,7 +392,15 @@
             <xsl:with-param name="keymapping" select="$keys-phase-1"/>
          </xsl:apply-templates>
       </xsl:variable>
-      <xsl:copy-of select="$set-phase-1"/>
+      <xsl:variable name="keys-phase-2">
+         <xsl:apply-templates select="$set-phase-1" mode="create-key-mapping-step-2"/>
+      </xsl:variable>
+      <xsl:variable name="set-phase-2">
+         <xsl:apply-templates select="$set-phase-1" mode="replace-keys">
+            <xsl:with-param name="keymapping" select="$keys-phase-2"/>
+         </xsl:apply-templates>
+      </xsl:variable>
+      <xsl:copy-of select="$set-phase-2"/>
    </xsl:template>
    <xsl:template match="*:record-set" mode="create-labels">
       <xsl:copy>
@@ -212,6 +415,14 @@
                            <xsl:attribute name="f:c" select="1"/>
                         </xsl:if>
                         <xsl:value-of select="string-join( (*:datafield[@tag='700']/*:subfield[@code = 'b'], *:datafield[@tag='700']/*:subfield[@code = 'a']), ' ' )"/>
+                     </xsl:element>
+                  </xsl:when>
+                  <xsl:when test="@*:templatename = 'MARC21-200-Work'">
+                     <xsl:element name="f:label">
+                        <xsl:if test="$include_counters">
+                           <xsl:attribute name="f:c" select="1"/>
+                        </xsl:if>
+                        <xsl:value-of select="*:datafield[@tag='240']/*:subfield[@code = 'a']"/>
                      </xsl:element>
                   </xsl:when>
                </xsl:choose>

@@ -6,5 +6,6 @@
     </meta>
     <projectTree name="gorete.xpr">
         <file name="examples/marc21%20simple%20example/todos-pp-1-55.xml"/>
+        <file name="../data/todos-pp.xml"/>
     </projectTree>
 </project>
