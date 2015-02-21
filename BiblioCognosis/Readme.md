@@ -45,6 +45,11 @@ Expressão: <record f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1002"
 
 Manifestação: <record f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1003"
 
+#### Separar o documento único com os 4 tipos de registo em 4 documentos distintos
+
+```
+separa.xsl
+```
 
 ### Enriquecimento do FRBR XML
 

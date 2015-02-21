@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<collection xmlns:f="http://idi.ntnu.no/frbrizer/">
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:f="http://idi.ntnu.no/frbrizer/">
    <record f:id="04f6f1bc-c61f-355f-848e-75a00c7459c0"
            f:type="http://iflastandards.info/ns/fr/frbr/frbrer/C1001">
       <datafield tag="200" ind1="1" ind2=" ">

@@ -9,7 +9,7 @@ var marc = require('marcjs'), fs = require('fs');
 //
 // http://www.bookmarc.pt/unimarc/
 
-// Abrir browser e sacar cookie (e visualizar em Unimarc no browser!)
+// estilosASDASDADSDdDdDAdsfgddfgsdfgsdfgsdfgsdfg
 
 var post_data_2 = querystring.stringify({
 	'_ctl4:_ctl0:ddlTopFormats' : 'C:\inetpub\wwwroot\OPAC\VisualFormats\formatUnimarc.xsl'

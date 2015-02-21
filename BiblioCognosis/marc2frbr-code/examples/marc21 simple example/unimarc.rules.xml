@@ -15,7 +15,7 @@
    -->
 
    <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005" label="Person" templatename="MARC21-700-Person">
-      <note>Creator identified with the help of field 700</note>
+      <note>Criador gerado a partir da informação do campo 700</note>
       <anchor tag="700"/>
       <attributes>
          <datafield tag="700">
