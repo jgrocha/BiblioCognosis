@@ -19,6 +19,54 @@ Correspondente MARC XML:
 </datafield>
 ```
 
+A conversão é feita através da script BiblioCognosis/ils-10448.js que percorre o OPAC e vai gravando registo a registo.
+O resultado é BiblioCognosis/data/todos.xml, que depois é formatado em
+
+### Dados brutos (em UNIMARC, codificados em XML)
+
+Todos os registos bibliográficos
+
+* BiblioCognosis/data/todos-pp.xml
+
+Amostra dos primeiros 55 registos bibliográficos
+
+* BiblioCognosis/data/todos-pp-1-55.xml
+
+### Dados no modelo FRBR da IFLA
+
+Registos bibliográficos organizados segundo o modelo FRBR da IFLA: Person, Work, Expression, Manifestation
+
+* BiblioCognosis/marc2frbr-code/examples/marc21 simple example/records.xml
+
+Amostra dos primeiros 55 registos bibliográficos
+
+* BiblioCognosis/marc2frbr-code/examples/marc21 simple example/records-1-55.xml
+
+### Regras de transformação
+
+Documento que indica que campos do UNIMARC devem ser aproveitados; e qual o seu papel no formato FRBR
+
+BiblioCognosis/marc2frbr-code/examples/marc21 simple example/unimarc.rules.xml
+
+Documento gerado automaticamente a partir das regras anteriores.
+
+BiblioCognosis/marc2frbr-code/examples/marc21 simple example/unimarc.conversion.xslt
+
+### Dados ligados dos autores
+
+Dados só dos autores (extraídos de BiblioCognosis/marc2frbr-code/examples/marc21 simple example/records.xml)
+
+BiblioCognosis/marc2frbr-code/examples/marc21 simple example/autor.xml
+
+Script de criação de dados ligados dos autores:
+
+BiblioCognosis/xml2js2xml.js
+
+Dados ligados dos autores:
+
+BiblioCognosis/marc2frbr-code/examples/marc21 simple example/autor-extra.xml
+
+
 ## Conversão de MARC XML para Modelo relacional (FRBR)
 
 Conversão baseada em XSLT, com base no trabalho disponibilizado no SourceForge por Trond Aalberg, http://www.ntnu.edu/employees/trondaal

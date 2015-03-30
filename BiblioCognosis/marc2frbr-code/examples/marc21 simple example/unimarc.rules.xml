@@ -1,8 +1,6 @@
 <templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="../../xsd/frbrizer.xsd">
    
-   <!-- A simple example file that shows the rules for creating person, work, expression and manifestation entities from 100 and 240 fields -->
-   
    <!-- keyfilter is used to remove punctuation etc. from the values that are used in the keystring -->
    <keyfilter>replace(lower-case(string-join($key, '\')), '[^a-z0-9\\#|¤§]', '')</keyfilter>
 
@@ -14,7 +12,7 @@
         </datafield>
    -->
 
-   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005" label="Person" templatename="MARC21-700-Person">
+   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1005" label="Person" templatename="UNIMARC-700-Person">
       <note>Criador gerado a partir da informação do campo 700</note>
       <anchor tag="700"/>
       <attributes>
@@ -28,7 +26,7 @@
       <!-- relacionamento entre person e work -->
       <relationships>
          <relationship type="http://iflastandards.info/ns/fr/frbr/frbrer/P2010" itype="http://iflastandards.info/ns/fr/frbr/frbrer/P2009">
-            <target entity="MARC21-200-Work"/>
+            <target entity="UNIMARC-200-Work"/>
          </relationship>
       </relationships>
       <label select="string-join( (*:datafield[@tag='700']/*:subfield[@code = 'b'], *:datafield[@tag='700']/*:subfield[@code = 'a']), ' ' )"/>
@@ -40,7 +38,7 @@
       </key>
    </entity>
 
-   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1001" label="Work" templatename="MARC21-200-Work">
+   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1001" label="Work" templatename="UNIMARC-200-Work">
       <note>Work identified by title in 200</note>
       <anchor tag="200"/>
       <attributes>
@@ -64,7 +62,7 @@
       </key>
       <relationships>
          <relationship type="http://iflastandards.info/ns/fr/frbr/frbrer/P2001" label="is realized through" itype="http://iflastandards.info/ns/fr/frbr/frbrer/P2002" ilabel="is realization of">
-            <target entity="MARC21-240-Expression" same-field="true"/>
+            <target entity="UNIMARC-240-Expression" same-field="true"/>
          </relationship>
       </relationships>
    </entity>
@@ -74,7 +72,7 @@
       http://montalegre.opacnet.com/OPAC/default.aspx?ContentAreaControl=ShowRegHoldings.ascx&RegNo=1172
    -->
 
-   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1002" label="Expression" templatename="MARC21-240-Expression" subtype="{($anchor_field/*:subfield[@code='h'], $record/*:datafield[@tag='336']/*:subfield[@code = 'a'])[1]}">
+   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1002" label="Expression" templatename="UNIMARC-240-Expression" subtype="{($anchor_field/*:subfield[@code='h'], $record/*:datafield[@tag='336']/*:subfield[@code = 'a'])[1]}">
       <note>Expression for the work identified in 240</note>
       <anchor tag="200" condition="@ind1 = '1'"/>
       <attributes>
@@ -97,7 +95,7 @@
 
       <relationships>
          <relationship type="http://iflastandards.info/ns/fr/frbr/frbrer/P2003" itype="http://iflastandards.info/ns/fr/frbr/frbrer/P2004">
-            <target entity="MARC21-001-Manifestation"/>
+            <target entity="UNIMARC-001-Manifestation"/>
          </relationship>
       </relationships>
 
@@ -108,7 +106,7 @@
    http://montalegre.opacnet.com/OPAC/default.aspx?ContentAreaControl=ShowRegHoldings.ascx&RegNo=14242
    -->
 
-   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1003" label="Manifestation" templatename="MARC21-001-Manifestation">
+   <entity type="http://iflastandards.info/ns/fr/frbr/frbrer/C1003" label="Manifestation" templatename="UNIMARC-001-Manifestation">
       <note>Manifestation</note>
       <anchor tag="001"/>
       <attributes>
